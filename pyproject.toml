@@ -1,0 +1,32 @@
+[project]
+name = "grain-oxe"
+version = "0.1.0"
+description = "Grain-based dataloaders for the OXE dataset"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "array-record>=0.5.1",
+    "grain>=0.2.2",
+    "jax>=0.4.37",
+    "msgpack-numpy>=0.4.8",
+    "numpy>=2.2.0",
+    "pillow>=11.0.0",
+    "scipy>=1.14.1",
+    "tqdm>=4.67.1",
+]
+
+[tool.setuptools]
+packages = ["grain_oxe"]
+
+
+[tool.uv]
+package = true
+dev-dependencies = [
+    "ipykernel>=6.29.5",
+    "isort>=5.13.2",
+    "matplotlib>=3.10.0",
+    "ruff>=0.8.3",
+]
+
+[tool.uv.sources]
+grain-oxe = { workspace = true }
